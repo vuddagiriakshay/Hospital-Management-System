@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Patient Management</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+
+<h2>Hospital HMS</h2>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="patient.html">Patients</a>
+<a href="doctor.html">Doctors</a>
+<a href="appointment.html">Appointments</a>
+<a href="billing.html">Billing</a>
+<a href="prescription.html">Prescriptions</a>
+
+<button onclick="logout()">
+Logout
+</button>
+
+
+</div>
+<div class="main">
+
+<h1 class="page-title">
+Patient Management
+</h1>
+
+<div class="form-container">
+
+
+<h2>Add Patient</h2>
+
+<input
+id="name"
+placeholder="Patient Name">
+
+<input
+id="age"
+type="number"
+min="1"
+max="100"
+placeholder="Age">
+
+<select id="gender">
+
+    <option value="">
+    Select Gender
+    </option>
+
+    <option value="Male">
+    Male
+    </option>
+
+    <option value="Female">
+    Female
+    </option>
+
+    <option value="Other">
+    Other
+    </option>
+
+</select>
+
+<input
+id="phone"
+maxlength="10"
+placeholder="Phone Number">
+
+<input
+id="address"
+placeholder="Address">
+
+<button
+onclick="addPatient()">
+
+Add Patient
+
+</button>
+
+</div>
+
+<input
+class="search-box"
+type="text"
+id="searchPatient"
+placeholder="Search Patient"
+onkeyup="searchPatient()">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Name</th>
+<th>Age</th>
+<th>Gender</th>
+<th>Phone</th>
+<th>Address</th>
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="patientTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="js/patient.js"></script>
+<script src="js/protect.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+
+</html>

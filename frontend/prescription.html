@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+<title>Prescription Management</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+
+<h2>Hospital HMS</h2>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="patient.html">Patients</a>
+<a href="doctor.html">Doctors</a>
+<a href="appointment.html">Appointments</a>
+<a href="billing.html">Billing</a>
+<a href="prescription.html">Prescriptions</a>
+
+<button onclick="logout()">
+Logout
+</button>
+
+
+</div>
+
+<div class="main">
+
+<h1 class="page-title">
+Prescription Management
+</h1>
+
+<div class="form-container">
+
+<h2>Generate Prescription</h2>
+
+<label>Select Patient</label>
+
+<select id="patient">
+
+</select>
+
+<label>Select Doctor</label>
+
+<select id="doctor">
+
+</select>
+
+<label>Medicines</label>
+
+<textarea
+id="medicines"
+rows="5"
+placeholder="Enter Medicines">
+</textarea>
+
+<label>Instructions</label>
+
+<textarea
+id="instructions"
+rows="5"
+placeholder="Enter Instructions">
+</textarea>
+
+<button onclick="createPrescription()">
+
+Generate Prescription
+
+</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Patient</th>
+<th>Doctor</th>
+<th>Medicines</th>
+<th>Instructions</th>
+<th>Date</th>
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="prescriptionTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="js/prescription.js"></script>
+<script src="js/protect.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+
+</html>

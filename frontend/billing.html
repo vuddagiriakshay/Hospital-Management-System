@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+<title>Billing Management</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+
+<h2>Hospital HMS</h2>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="patient.html">Patients</a>
+<a href="doctor.html">Doctors</a>
+<a href="appointment.html">Appointments</a>
+<a href="billing.html">Billing</a>
+<a href="prescription.html">Prescriptions</a>
+
+<button onclick="logout()">
+Logout
+</button>
+
+
+</div>
+
+<div class="main">
+
+<h1 class="page-title">
+Billing Management
+</h1>
+
+<div class="form-container">
+
+<h2>Generate Bill</h2>
+
+<label>Select Patient</label>
+
+<select id="patient">
+
+</select>
+
+<label>Consultation Fee</label>
+
+<input
+type="number"
+id="consultation"
+placeholder="Consultation Fee">
+
+<label>Medicine Fee</label>
+
+<input
+type="number"
+id="medicine"
+placeholder="Medicine Fee">
+
+<label>Lab Fee</label>
+
+<input
+type="number"
+id="lab"
+placeholder="Lab Fee">
+
+<button onclick="createBill()">
+
+Generate Bill
+
+</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Patient</th>
+<th>Consultation</th>
+<th>Medicine</th>
+<th>Lab</th>
+<th>Total</th>
+<th>Date</th>
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="billTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="js/billing.js"></script>
+<script src="js/protect.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+
+</html>

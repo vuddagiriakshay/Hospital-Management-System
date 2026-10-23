@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+<title>Doctor Management</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+
+<h2>Hospital HMS</h2>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="patient.html">Patients</a>
+<a href="doctor.html">Doctors</a>
+<a href="appointment.html">Appointments</a>
+<a href="billing.html">Billing</a>
+<a href="prescription.html">Prescriptions</a>
+
+<button onclick="logout()">
+Logout
+</button>
+
+
+</div>
+
+<div class="main">
+
+<h1 class="page-title">
+Doctor Management
+</h1>
+
+<div class="form-container">
+
+<h2>Add Doctor</h2>
+
+<input
+id="name"
+placeholder="Doctor Name">
+
+<select id="specialization">
+
+<option value="">
+Select Specialization
+</option>
+
+<option>Cardiologist</option>
+<option>Neurologist</option>
+<option>Orthopedic</option>
+<option>Pediatrician</option>
+<option>Dermatologist</option>
+<option>ENT</option>
+<option>General Physician</option>
+<option>Gynecologist</option>
+
+</select>
+
+<select id="gender">
+
+<option value="">
+Select Gender
+</option>
+
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+
+</select>
+
+<input
+id="phone"
+maxlength="10"
+placeholder="Phone Number">
+
+<input
+id="experience"
+type="number"
+placeholder="Years of Experience">
+
+<button onclick="addDoctor()">
+Add Doctor
+</button>
+
+</div>
+
+<input
+class="search-box"
+type="text"
+id="searchDoctor"
+placeholder="Search Doctor">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Name</th>
+<th>Specialization</th>
+<th>Gender</th>
+<th>Phone</th>
+<th>Experience</th>
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="doctorTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="js/doctor.js"></script>
+<script src="js/protect.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+
+</html>

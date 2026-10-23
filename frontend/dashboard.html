@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+<title>Hospital Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+
+<h2>Hospital HMS</h2>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="patient.html">Patients</a>
+<a href="doctor.html">Doctors</a>
+<a href="appointment.html">Appointments</a>
+<a href="billing.html">Billing</a>
+<a href="prescription.html">Prescriptions</a>
+
+<button onclick="logout()">
+Logout
+</button>
+
+
+</div>
+
+<div class="main">
+
+<h1 class="page-title">
+Dashboard
+</h1>
+
+<div class="card-container">
+
+<div class="card">
+
+    <h3>Patients</h3>
+
+    <div
+    id="patients"
+    class="count">
+
+    0
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <h3>Doctors</h3>
+
+    <div
+    id="doctors"
+    class="count">
+
+    0
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <h3>Appointments</h3>
+
+    <div
+    id="appointments"
+    class="count">
+
+    0
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <h3>Revenue</h3>
+
+    <div
+    id="revenue"
+    class="count">
+
+    ₹0
+
+    </div>
+
+</div>
+
+
+</div>
+
+<div class="form-container">
+
+
+<canvas
+id="hospitalChart">
+
+</canvas>
+
+</div>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+<script src="js/protect.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+
+</html>
